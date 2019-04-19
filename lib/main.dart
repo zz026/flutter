@@ -15,30 +15,17 @@ import 'package:flutter/material.dart';
           ),
           body: Center(
             child: Container(
-              child: new Text(
-              'Flutter是谷歌的移动UI框架。',
-                // textAlign: TextAlign.center,
-                // maxLines: 2,
-                // overflow: TextOverflow.ellipsis,
-                style: TextStyle(
-                  fontSize: 20.0,
-                  color: Color.fromARGB(255, 255, 255, 255),
-                  decoration: TextDecoration.underline,
-                  decorationStyle: TextDecorationStyle.dashed,
-                ),
+              child: new Image.network(
+                'https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1555666159&di=f3543bed52f4bd16d537481e81c4a87c&src=http://pic145.nipic.com/file/20171106/26259993_153823167927_2.jpg',
+                  // fit: BoxFit.fill,
+                  color: Colors.pink,
+                  colorBlendMode: BlendMode.darken,
+                  repeat: ImageRepeat.repeat,
               ),
+              width: 400,
+              height: 500,
+              color: Colors.lightBlue,
               alignment: Alignment.bottomRight,
-              width: 500.0,
-              height: 300.0,
-              // color: Colors.lightGreen,
-              padding: const EdgeInsets.fromLTRB(30, 10, 30 ,10),
-              margin: const EdgeInsets.all(20),
-              decoration: new BoxDecoration(
-                gradient: LinearGradient(
-                  colors: [Colors.yellowAccent,Colors.lightGreen, Colors.lightBlue,Colors.purple]
-                ),
-                border: Border.all(width: 4.0, color: Colors.redAccent)
-              )
             )
           ),
         ),

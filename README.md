@@ -11,7 +11,7 @@ q键关闭
 vs code 右下角可安装、打开模拟器
 
 <!-- hello world -->
-import 'package:flutter/material.dart';
+  import 'package:flutter/material.dart';
   void main() => runApp(MyApp());
 
   class MyApp extends StatelessWidget {
@@ -31,7 +31,7 @@ import 'package:flutter/material.dart';
 
 <!-- Text组件 -->
 对齐方式
-textAlign: 
+###textAlign: 
   TextAlign.center: 文本以居中形式对齐,这个也算比较常用的了。
   TextAlign.left:左对齐，经常使用，让文本居左进行对齐，效果和start一样。
   TextAlign.right :右对齐，使用频率也不算高。
@@ -51,7 +51,7 @@ TextOverflow.fade, 出的部分会进行一个渐变消失的效果，上线的�
 
 <!-- Container -->
 相当于div
-alignment:
+###alignment:
 Alignment.center,
 Alignment.centerLeft,
 Alignment.centerRight,
@@ -61,3 +61,29 @@ Alignment.topRight,
 Alignment.bottomLeft,
 Alignment.bottomCenter,
 Alignment.bottomRight,
+
+###padding||margin: const EdgeInsets.all(10)
+const EdgeInsets.fromLTRB(左上右下)
+
+###decoration(和背景色color冲突，两者选一)
+ decoration:new BoxDecoration(
+    gradient:const LinearGradient(
+      colors:[Colors.lightBlue,Colors.greenAccent,Colors.purple]
+    ) // 渐变
+    border:Border.all(width:2.0,color:Colors.red) // 边框
+  ),
+<!-- Image -->
+###Image
+.asset('加载资源图片')
+.network('图片网络地址')
+.file:加载本地图片
+###BoxFit
+  .fill:全图显示，图片会被拉伸，并充满父容器。
+  .contain:全图显示，显示原比例，可能会有空隙。
+  .cover：显示可能拉伸，可能裁切，充满（图片要充满整个容器，还不变形）。
+  .fitWidth：宽度充满（横向充满），显示可能拉伸，可能裁切。
+  .fitHeight ：高度充满（竖向充满）,显示可能拉伸，可能裁切。
+  .scaleDown：效果和contain差不多，但是此属性不允许显示超过源图片大小，可小不可大。
+###colorBlendMode
+图片混入颜色（滤镜？）
+colorBlendMode: BlendMode.darken,
